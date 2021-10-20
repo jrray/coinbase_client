@@ -1166,19 +1166,19 @@ pub struct WithdrawInfo {
 #[derive(Debug, Deserialize)]
 pub struct OrderInfo {
     pub id: String,
-    pub price: String,
-    pub size: String,
+    pub price: Option<String>,
+    pub size: Option<String>,
     pub product_id: String,
     pub side: String,
     pub stp: Option<String>,
     pub r#type: String,
-    pub time_in_force: String,
+    pub time_in_force: Option<String>,
     pub post_only: bool,
     #[serde(deserialize_with = "deserialize_to_date")]
     pub created_at: DateTime<Utc>,
     pub fill_fees: String,
     pub filled_size: String,
-    pub executed_value: String,
+    pub executed_value: Option<String>,
     pub status: String,
     pub settled: bool,
 }
