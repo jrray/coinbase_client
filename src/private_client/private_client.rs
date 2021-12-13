@@ -1173,7 +1173,7 @@ pub struct OrderInfo {
     pub stp: Option<String>,
     pub r#type: String,
     pub time_in_force: Option<String>,
-    pub post_only: bool,
+    pub post_only: Option<bool>,
     #[serde(deserialize_with = "deserialize_to_date")]
     pub created_at: DateTime<Utc>,
     pub fill_fees: String,
